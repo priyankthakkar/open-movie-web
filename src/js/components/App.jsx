@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const App = () => (
-	<div>
-		<h1>Everything is now JSX.</h1>
-	</div>
+  <div>
+    <h1>Everything is now JSX.</h1>
+  </div>
 );
 
 export default App;

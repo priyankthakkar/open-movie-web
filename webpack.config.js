@@ -31,6 +31,12 @@ const config = {
 				exclude: /node_modules/,
 				include: [path.join(__dirname, '/src/js')],
 				loader: ['babel-loader']
+			},
+			{
+				enforce: 'pre',
+				test: /\.jsx?$/,
+				exclude: /node_modules/,
+				use: ['babel-loader', 'eslint-loader']
 			}
 		]
 	}
