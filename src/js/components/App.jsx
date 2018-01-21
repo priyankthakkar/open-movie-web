@@ -1,9 +1,14 @@
 import React from 'react';
+import { Container, Row, Col } from 'reactstrap';
 
 const App = () => (
-  <div>
-    <h1>Everything is set</h1>
-  </div>
+  <Container>
+    <Row>
+      <Col md="12">
+        <h1>Everything is set</h1>
+      </Col>
+    </Row>
+  </Container>
 );
 
 export default App;
