@@ -7,7 +7,7 @@ export const LimitedTextTitle = styled.div`
 `;
 
 export const RowContainer = styled.div`
-  padding-top: 15px;
+  padding-top: 70px;
 `;
 
 export const Test = 'test';

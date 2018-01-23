@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Col, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { Col, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 import { LimitedTextTitle } from '../custom-styled/CustomStyledComponents';
 
 const MovieCard = ({ movie }) => (
@@ -14,7 +15,12 @@ const MovieCard = ({ movie }) => (
       </CardTitle>
       <CardSubtitle>{`Rated: ${movie.Rated} Country: ${movie.Country}`}</CardSubtitle>
       <CardText className="text-justify">{movie.Plot}</CardText>
-      <Button color="primary">More</Button>
+      <Link
+        className="btn btn-primary" //eslint-disable-line
+        to="/details"
+      >
+        More
+      </Link>
     </CardBody>
   </Col>
 );

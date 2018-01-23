@@ -1,29 +1,12 @@
-import React, { Component } from 'react';
-import { Container, Row } from 'reactstrap';
+import React from 'react';
 import Header from './Header';
-import MovieCard from './MovieCard';
-import { RowContainer } from '../custom-styled/CustomStyledComponents';
-import getMovies from '../constants/constants';
+import Main from './Main';
 
-class App extends Component {
-  static renderMovies() {
-    const movies = getMovies();
-    const cards = movies.map(movie => <MovieCard key={movie.imdbID} movie={movie} />);
-    return cards;
-  }
-
-  render() {
-    return (
-      <div>
-        <Header title="Open Movie App" />
-        <Container>
-          <RowContainer>
-            <Row>{App.renderMovies()}</Row>
-          </RowContainer>
-        </Container>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <Header title="Open Movie App" />
+    <Main />
+  </div>
+);
 
 export default App;

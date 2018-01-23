@@ -19,7 +19,7 @@ class Header extends Component {
 
   render() {
     return (
-      <Navbar color="light" light expand="md">
+      <Navbar color="light" light expand="md" fixed="top">
         <NavbarBrand href="/">{this.props.title}</NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.open} navbar>
