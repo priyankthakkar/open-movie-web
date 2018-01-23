@@ -6,6 +6,7 @@ const config = {
 	entry: [
 		'./src/js/index.jsx'
 	],
+	devtool: 'cheap-eval-source-map',
 	output: {
 		path: path.resolve(__dirname, 'public'),
 		filename: 'bundle.js'
