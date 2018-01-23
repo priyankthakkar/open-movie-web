@@ -6,22 +6,23 @@
   "author": "Priyank Thakkar",
   "license": "MIT",
   "scripts": {
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "format": "prettier --write --single-quote=true --print-width=120 --parser=flow --tab-width=2 \"src/js/**/*.{js,jsx}\""
   },
   "lint-staged": {
     "src/js/**/*.{js,jsx}": [
-      "prettier --single-quote --print-width=120 --write",
+      "prettier --single-quote=true --print-width=120 --parser=flow --tab-width=2 --write",
       "git add"
     ]
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "4.0.0-beta.3",
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9",
-    "react": "15.3.0",
-    "react-dom": "15.3.0",
-    "react-transition-group": "1.1.2",
-    "reactstrap": "^4.8.0"
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "reactstrap": "5.0.0-alpha.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -29,6 +30,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.9",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -41,6 +43,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^6.0.1",
     "prettier": "^1.10.2",
+    "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   }

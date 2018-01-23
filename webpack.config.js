@@ -27,7 +27,7 @@ const config = {
 	module: {
 		rules: [
 			{
-				test: /\.jsx?$/,
+				test: /\.{js, jsx}$/,
 				exclude: /node_modules/,
 				include: [path.join(__dirname, '/src/js')],
 				loader: ['babel-loader']
@@ -37,6 +37,10 @@ const config = {
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				use: ['babel-loader', 'eslint-loader']
+			},
+			{
+				test: /\.css$/,
+				use: ['style-loader', 'css-loader']
 			}
 		]
 	}

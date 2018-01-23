@@ -16,6 +16,9 @@
 	"plugins": [
 		"prettier"
 	],
+	"rules": {
+		"quotes": [ 2, "single", "avoid-escape" ]
+	},
 	"extends": [
 		"airbnb",
 		"prettier",

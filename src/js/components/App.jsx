@@ -1,14 +1,28 @@
-import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import React, { Component } from 'react';
+import { Container, Row } from 'reactstrap';
+import Header from './Header';
+import MovieCard from './MovieCard';
+import getMovies from '../constants/constants';
 
-const App = () => (
-  <Container>
-    <Row>
-      <Col md="12">
-        <h1>Everything is set</h1>
-      </Col>
-    </Row>
-  </Container>
-);
+class App extends Component {
+  static renderMovies() {
+    const movies = getMovies();
+    const cards = movies.map(movie => {
+      return <MovieCard key={movie.name} movie={movie} />;
+    });
+    return cards;
+  }
+
+  render() {
+    return (
+      <div>
+        <Header title="Open Movie App" />
+        <Container>
+          <Row>{App.renderMovies()}</Row>
+        </Container>
+      </div>
+    );
+  }
+}
 
 export default App;
